@@ -1,0 +1,1086 @@
+:root {
+  --margins: clamp(2px, 1vh, 20px);
+    --highlight-color: /* #ef7b40 grapefruit */ #00BB99
+    /* #F0A340 orange*/;
+
+    --second-highlight: #DDDDDD;
+}
+
+
+body {
+    background-color: #ccc;
+    color: #222;
+    font-family: Open Sans;
+    line-height: 1.2em;
+    min-width: 410px;
+    background: linear-gradient(to bottom, var(--highlight-color), white);
+    background-size: cover;
+    margin: 0;
+    height: 98.5vh;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    line-height: 1.2em;
+    vertical-align: middle;
+}
+
+main h2, main h3, main h4, main h5, main h6 {
+    margin: 0 auto 1em auto;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+
+a {
+    text-decoration: none;
+    color: #444;
+}
+
+#pinwand {
+    margin: auto auto;
+    height: 50vh;
+    overflow: auto;
+}
+
+#pinwand::-webkit-scrollbar {
+    width: .2em;
+}
+
+#pinwand::-webkit-scrollbar-track {
+    background: #aaa;
+}
+
+#pinwand::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 5px;
+
+}
+
+.post {
+    width: 100%;
+    margin: 0 0 1em -1em;
+    padding: 1.5em 2em 0 2em;
+    background: var(--second-highlight);
+    box-sizing: border-box;
+}
+
+.subPost {
+    margin: .4em;
+    line-height: 3em;
+    display: flex;
+    align-items: center;
+}
+
+.subPost a {
+    font-size: 14px;
+    color: blue;
+}
+
+.subPost img {
+    height: 1em;
+}
+
+a:hover {
+    color: #222;
+}
+
+#container {
+    background-color: #fff;
+    margin: 1.5vh auto;
+    max-width: 1280px;
+    height: 97vh;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 5px 6px 20px #555;
+    z-index: 1;
+    overflow: hidden;
+}
+
+header {
+    padding: .8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin-bottom: .2em;
+}
+
+header img {
+    height: 6em;
+}
+
+header a {
+    display: inherit;
+}
+
+header #menu_label {
+    display: none;
+}
+
+nav {
+    background-color: var(--highlight-color);
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    height: 4.0vh;
+    box-sizing: border-box;
+}
+
+main {
+    padding: 1em 1em .5em 1em;
+    background: #fff;
+    height: 79.5vh;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+footer {
+    background-color: var(--highlight-color);
+    height: 4vh;
+    padding: .6em 1em;
+    border-radius: 0px 0px 13px 13px;
+    box-sizing: border-box;
+}
+
+footer > a {
+    float: right;
+    font-size: 0.75em;
+    text-transform: uppercase;
+}
+
+#welcome {
+    margin: 0 -1em;
+    width: calc(100% + 2em);
+}
+
+
+nav ul {
+    margin: 0;
+    height: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: inherit;
+}
+
+nav ul a {
+    height: inherit;
+}
+
+nav ul li {
+    display: inline-block;
+    background: var(--highlight-color);
+    margin: 0;
+    padding: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    height: inherit;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+nav ul li a {
+  display: grid;
+  align-items: center;
+  height: 100%;
+}
+
+nav ul li:hover {
+    background: #ddd;
+}
+
+nav a, nav a:hover, nav a:visited {
+    color: #444;
+    text-decoration: none;
+}
+
+nav .active {
+    font-weight: bolder;
+}
+
+select {
+    float: right;
+}
+
+input.button {
+    margin: 0px 2.5px 0px 2.5px;
+    border-radius: 30px;
+    border: 0;
+    padding: 0.3em 0.5em;
+    background: #aaa;
+    color: #444;
+    transition: padding 0.3s;
+}
+
+input.button:hover {
+    padding: 0.3em 1.0em;
+}
+
+textarea {
+    max-width: 100%;
+    display: block;
+}
+
+table {
+    border: 0;
+    border-collapse: collapse;
+}
+
+table.daten tr:nth-child(even) {
+    background: #ddd;
+}
+
+table.daten tr:nth-child(odd) {
+    background: #bbb;
+}
+
+td {
+    font-weight: lighter;
+    text-align: right;
+    padding: 0.25em 0.5em 0.25em 0.5em;
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+.first {
+    font-weight: bold;
+    text-align: left;
+}
+
+#galerie {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: space-around;
+}
+
+div .bildW {
+    flex: 0 1 288px;
+    height: 200px;
+    margin: 0.5em;
+}
+
+div .bild {
+    flex: 0 1 288px;
+    height: 150px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    position: relative;
+    background-size: cover;
+}
+
+div .bild::before {
+    content: '';
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0));
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+div .bild .title {
+    color: #fff;
+    position: relative;
+    left: 0.7em;
+    bottom: 0.4em;
+}
+
+.star {
+    color: red;
+}
+
+#m-menu {
+    display: none;
+}
+
+@media (max-width: 961px) {
+    nav {
+        display: none;
+    }
+
+    header {
+        background: #999;
+        border-radius: 0;
+    }
+
+    header h1 {
+        display: inline;
+    }
+
+    header #menu_label {
+        display: inline;
+        line-height: 3em;
+        font-size: 1em;
+    }
+
+    main {
+        height: 84vh;
+    }
+
+    #pinwand {
+        height: 56vh;
+    }
+
+    #postVerfassen > form > div > textarea {
+        width: 25rem;
+    }
+
+    #container {
+        margin: 0;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    footer {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 930px) {
+    iframe {
+        width: 75%;
+        height: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media (max-width: 400px) {
+    div .bar {
+        flex-basis: 100%;
+    }
+}
+
+.m-mobile {
+    display: block;
+}
+
+#profil {
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-template-columns: 30% 60%;
+    grid-template-rows: 10em 15em 10em;
+    grid-column-gap: 5em;
+}
+
+#profil section {
+    align-self: center;
+}
+
+#profil section h3 {
+    margin: 0;
+}
+
+#profil #bild {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: flex-end;
+}
+
+#profil #stammdaten {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+#profil #kontakt {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: flex-start;
+}
+
+#bild img {
+    border-radius: 50%;
+    height: 8em;
+}
+
+span#user {
+    margin-right: 1em;
+}
+
+#postVerfassen > form > div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#postVerfassen {
+    margin: 1em auto 2em auto;
+}
+
+#postVerfassen form {
+    margin: auto auto;
+    width: 100%;
+}
+
+.postButton {
+    box-shadow: 0 0 20px 0 #555;
+    padding: .5em;
+    width: 6em;
+    height: 6.6em;
+    background: white;
+    border: 0;
+    border-radius: 13px;
+    line-height: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-variant: small-caps;
+}
+
+.postButton:focus {
+    outline: none;
+}
+
+.postButton:active {
+    box-shadow: 0 0 20px 0 #555, 0 0 10px 0px #555 inset;
+}
+
+.postButton > span {
+    margin-top: .2em;
+}
+
+#postVerfassen #pin {
+    height: 4em;
+    width: 5em;
+    padding: 0;
+    background: url('img/pin.png') no-repeat 75% 50%;
+    background-size: contain;
+    border: 0;
+}
+
+#postVerfassen textarea {
+    font-family: "Open Sans Light";
+    font-size: 1.8em;
+    width: 40rem;
+    display: inline-block;
+    padding: 1em;
+    box-shadow: 0 0 20px 0 #555;
+    border: 0;
+    border-radius: 13px;
+    resize: none;
+}
+
+#postVerfassen textarea:focus {
+    outline: none;
+}
+
+.post > article {
+    margin-top: .8em;
+    font-size: 1.2em;
+}
+
+span.verfasser {
+    font-style: italic;
+    font-size: .9em;
+}
+
+.chatGrid {
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+}
+
+#chats {
+    grid-row: 1/3;
+    grid-column: 1/2;
+    overflow: auto;
+    height: 65vh;
+}
+
+#chats::-webkit-scrollbar {
+    width: .3em;
+}
+
+#chats::-webkit-scrollbar-track {
+    background: #aaa;
+}
+
+#chats::-webkit-scrollbar-thumb {
+    background: #666;
+}
+
+#chats > button {
+    border: 0;
+    margin: 1em;
+    padding: .5em 0;
+    text-transform: uppercase;
+    width: 80%;
+    box-shadow: 0 0 15px 0 #555;
+    background: white;
+    border-radius: 13px;
+}
+
+#chats > button:focus {
+    outline: none;
+}
+
+#chats > button:active {
+    box-shadow: 0 0 10px 0px #555 inset;
+}
+
+.chat {
+    width: 100%;
+    margin: 0;
+    padding: .5em 2em .5em 2em;
+    background: white;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.chat > img {
+    height: 3em;
+    border-radius: 50%;
+    margin-right: 1em;
+}
+
+.chatDIV {
+    width: 85%;
+}
+
+#messageVerfassen > .form {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+#messageVerfassen {
+    margin: 0;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    align-self: end;
+    display: flex;
+}
+
+#messageVerfassen .form {
+    margin: auto auto;
+    width: 100%;
+}
+
+#messageVerfassen #send {
+    height: 3em;
+    width: 3em;
+    padding: 0;
+    background: url('img/send.png') no-repeat;
+    background-size: contain;
+    border: 0;
+}
+
+#messageVerfassen textarea {
+    font-family: "Open Sans Light";
+    font-size: 1.2em;
+    width: 20rem;
+    display: inline-block;
+    padding: 1em;
+    box-shadow: 0 0 20px 0 #555;
+    border: 0;
+    border-radius: 13px;
+    resize: none;
+}
+
+#messageVerfassen textarea:focus {
+    outline: none;
+}
+
+.sendButton {
+    box-shadow: 0 0 20px 0 #555;
+    padding: 1em;
+    background: white;
+    border: 0;
+    border-radius: 13px;
+    height: 4.5em;
+}
+
+.sendButton:focus {
+    outline: none;
+}
+
+.sendButton:active {
+    box-shadow: 0 0 20px 0 #555, 0 0 10px 0px #555 inset;
+}
+
+.sendButton > span {
+    margin-top: .2em;
+}
+
+#chat {
+    height: 52vh;
+    overflow: auto;
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+#chat::-webkit-scrollbar {
+    width: .3em;
+}
+
+#chat::-webkit-scrollbar-track {
+    background: #aaa;
+}
+
+#chat::-webkit-scrollbar-thumb {
+    background: #666;
+}
+
+.message {
+    width: 80%;
+    margin: .5em 0;
+    padding: .5em;
+    background: var(--second-highlight);
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+
+.messageRight {
+    margin: .5em 0 .5em 20%;
+}
+
+#matte {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: rgba(0, 0, 0, .8);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#matteBox {
+    background: rgba(0, 0, 0, .6);
+    height: 15vh;
+    padding: 2em;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 1em;
+    z-index: 2;
+}
+
+#matteBox label {
+    grid-column: 1/2;
+    justify-self: flex-end;
+}
+
+#matteBox #select {
+    grid-column: 2/3;
+}
+
+#matteBox #button {
+    grid-column: 1/3;
+    text-align: center;
+}
+
+#chooseChat {
+    display: contents;
+}
+
+#login {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10%;
+}
+
+#vertLine {
+    width: 1px;
+    background: black;
+    height: 100%;
+    display: flex;
+    margin-top: 13px;
+}
+
+section.form form {
+    margin: 0;
+}
+
+section.form input {
+    margin-top:.51em;
+}
+
+#login a {
+  display: flex;
+    font-style: italic;
+    font-weight: bolder;
+    margin-top: 13px;
+}
+
+section.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  margin-top: 13px;
+}
+
+section.form input,
+section.form button {
+  width: 100%;
+  line-height: 23px;
+  margin-top: 9px;
+}
+
+section.form button {
+  color: white;
+  background-color: var(--highlight-color);
+  border: var(--highlight-color);
+  border-radius: 3px;
+  padding: 4px;
+}
+
+.register {
+  width: 50%;
+}
+
+/* register form */
+
+section.regform form {
+    margin: 0;
+    border: 3px var(--highlight-color);
+    border-radius: 30px;
+}
+
+
+section.regform {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  width: 50%;
+  margin: auto;
+  font-size: 12pt;
+}
+
+section.regform input,
+section.regform textarea,
+section.regform button {
+  width: 100%;
+  margin-top: 9px;
+  margin-bottom: 8px;
+  line-height: 29px;
+  border-color: var(--highlight-color);
+  border-radius: 4px;
+  border-style: solid;
+  padding-left: 1mm;
+  font-size: inherit;
+}
+
+section.regform button {
+  color: white;
+  background-color: var(--highlight-color);
+  padding: 4px;
+}
+
+section.regform h3 {
+  margin-top: 13px;
+}
+
+#regmain {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#profname {
+  width: 70%;
+}
+
+#profpic {
+  position: absolute;
+  width: 30%;
+}
+
+#profspan {
+  height: 10px;
+  position: relative;
+  transform: translateY(10);
+}
+
+.feed-dev {
+  border-color: var(--highlight-color);
+  border-style: solid;
+  border-radius: 4px;
+  margin-bottom: 5vh;
+}
+
+#chat-list-entry {
+  border-color: var(--highlight-color);
+  border-style: solid;
+  border-radius: 2px;
+  margin-bottom: 2vh;
+  width: 50%;
+}
+
+#meinGrid {
+
+  display: grid;
+  grid-column-gap: clamp(5px, 5%, 80px);
+  grid-row-gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+}
+
+#make_post {
+  display: flex;
+  height: 1px;
+  position: absolute;
+  right: clamp(5px, 3%, 80px);
+  justify-content: right;
+  bottom: 8vh;
+  width: calc(100% - 2*clamp(5px, 5%, 100px));
+}
+
+
+#make_post_icon {
+  text-align: center;
+  height: 70px;
+  width:  70px;
+  font-size: 30px;
+  border-radius: 50%;
+  border: 6px solid transparent;
+  background-color: var(--highlight-color);
+  box-shadow: 0 20px 20px 0 rgba(95,186,233,0.4);
+}
+
+#make_post_dialog {
+  border-color: var(--highlight-color);
+  border-style: solid;
+  border-radius: 8px;
+  position: relative;
+  transform: translateY(clamp(-800px, -50vh, -300px));
+  background-color: white;
+  padding-top: clamp(2px, 1vh, 20px);
+
+  height: clamp(300px, 50vh, 800px);
+  width: clamp(550px, 50%, 700px);
+  box-shadow: 0 5px 10px 0 rgba(95,186,233,0.4);
+  }
+
+#make_post_dialog input,
+#make_post_dialog button,
+#make_post_dialog textarea {
+  width: calc(100% - 2 * var(--margins));
+  margin-left: calc(var(--margins));
+  margin-right: calc(var(--margins));
+  margin-bottom: var(--margins);
+}
+
+#make_post_dialog textarea {
+  height: 97%;
+  grid-area: co;
+}
+
+#make_post_dialog button {
+  grid-area: bu;
+  padding: 3px;
+}
+
+@keyframes fadeIn {
+   0% {
+     opacity: 0;
+     width: 0px
+   }
+   100% {
+     opacity: 1;
+     width: clamp(550px, 50%, 700px);
+   }
+}
+
+@keyframes fadeOut {
+   100% {
+     opacity: 0;
+     width: 0px
+   }
+   0% {
+     opacity: 1;
+     width: clamp(550px, 50%, 700px);
+   }
+}
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes backrotation {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
+.animated {
+  animation-fill-mode: both;
+}
+
+#make_post_form {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  grid-template-rows: clamp(20px, 20%, 60px) 1fr clamp(20px, 20%, 50px);
+  grid-template-areas:
+  "tit pic"
+  "co co"
+  "bu bu";
+}
+
+.seb-post {
+  display: grid;
+  grid-template-columns: 70px 1fr 1fr 1fr;
+  grid-template-rows: 70px 40px 200px;
+  grid-template-areas:
+  "profile-pic profile-name profile-name post-date"
+  "post-title post-title post-title post-title"
+  "post-content post-content post-content post-content";
+  height: 100%;
+  width: 100%;
+  gap: 10px;
+  margin: 5px;
+}
+
+.pic {
+  grid-template-areas:
+  "profile-pic profile-name profile-name post-date"
+  "post-pic post-pic post-title post-title"
+  "post-pic post-pic post-content post-content";
+}
+
+.seb-post .text {
+  padding: 10px;
+  overflow-wrap: anywhere;
+}
+
+.seb-post #profile-pic {
+  grid-area: profile-pic;
+  
+  width: 100%;
+  border-radius: 50%;
+}
+
+.seb-post #profile-name {
+  grid-area: profile-name;
+  display: grid;
+  align-items: center;
+  
+}
+
+.seb-post #post-date {
+  grid-area: post-date;
+  text-align: right;
+  
+}
+
+.seb-post #post-pic {
+  display: flex;
+  align-items: center;
+  grid-area: post-pic;
+  
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.seb-post #post-content {
+  grid-area: post-content;
+}
+
+.seb-post #post-title {
+  grid-area: post-title;
+  text-decoration: underline;
+}
+
+.buttons {
+  height: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  transform: translate(-10px, -50px);
+
+
+}
+
+
+.buttons span button  {
+  border-radius: 50%;
+  border: 6px solid transparent;
+  background-color: var(--highlight-color);
+  box-shadow: 0 5px 5px 0 rgba(95,186,233,0.4);
+}
+
+.seb-prof {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 30px 15px 1fr 40px;
+  grid-template-areas:
+  "prof-pic prof-name"
+  "prof-pic prof-date"
+  "prof-pic prof-info"
+  "prof-pic prof-follow";
+  gap: 10px;
+  height: auto;
+  margin: 5px;
+  margin-bottom: 7px;
+}
+
+.seb-prof #profile-pic {
+  grid-area: prof-pic;
+  width: 100%; 
+  height: 100%;
+  border-radius: 30px;
+}
+
+.seb-prof #profile-name {
+  grid-area: prof-name;
+  font-weight: 1000;
+}
+
+.seb-prof #profile-creation {
+  grid-area: prof-date;
+}
+
+.seb-prof #profile-info {
+  grid-area: prof-info;
+}
+
+.seb-prof #follow form button,
+.seb-prof #follow {
+  grid-area: prof-follow;
+  width: 100%;
+  height: 100%;
+}
+
+.greenbutton {
+  background-color: var(--highlight-color);
+  border-color: var(--highlight-color);
+  border-radius: 4px;
+  border-style: solid;
+}
